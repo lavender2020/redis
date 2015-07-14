@@ -34,10 +34,10 @@ ADD redis.conf /etc/redis/redis.conf
 RUN chown -R redis.redis /etc/redis
 
 # Define mountable directories.
-VOLUME ["/data/redis"]
+VOLUME ["/var/lib/redis"]
 
 # Define working directory.
-WORKDIR /data
+WORKDIR /tmp
 
 # Define default command.
 ENTRYPOINT  ["/usr/bin/redis-server"]
